@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>eliminarContacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position= "floating">Nombre</ion-label>
+    <ion-input [(ngModel)] = "text_nombre" type = "text" readonly=""></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position= "floating">Apellido</ion-label>
+    <ion-input [(ngModel)] = "text_apellido"  type = "text" readonly=""></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position= "floating" type = "text" readonly="">Telefono</ion-label>
+    <ion-input [(ngModel)] = "text_telefono"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position= "floating"  type = "email"readonly="">Correo</ion-label>
+    <ion-input [(ngModel)] = "text_correo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button color = "danger" id = "mostrar-alerta"readonly="">Guardar</ion-button>
+    <ion-button color = "dark" (click)="cancelar()" >Cancelar</ion-button>
+  </ion-item>
+  <ion-alert
+    trigger = "mostrar-alerta"
+    header = "Esta seguro de eliminar"
+    [buttons] = "botones">
+  </ion-alert>
+</ion-content>

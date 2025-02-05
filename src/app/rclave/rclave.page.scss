@@ -1,0 +1,77 @@
+/* 🌑 Fondo oscuro */
+.fondo-oscuro {
+    --background: #0a0a0a;
+    color: #ffcc00;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* 🛠 Tarjetas (ion-card) */
+  ion-card {
+    background: #222;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(255, 136, 0, 0.5);
+  }
+  
+  /* 📌 Títulos */
+  ion-card-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff3b30;
+  }
+  
+  /* 🎛 Campos de entrada */
+  ion-item {
+    --background: #333;
+    --color: white;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  /* 🏷️ Etiquetas */
+  ion-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  /* ✍ Entrada de datos */
+  ion-input {
+    color: white;
+    font-size: 16px;
+  }
+  
+  /* 📆 Picker de fecha (ion-datetime) */
+  ion-datetime {
+    --background: #222;
+    --color: #ffcc00;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  
+  /* 🎛 Botones */
+  ion-button {
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* 🔥 Botón de acción con degradado */
+  ion-button {
+    --color: white !important;
+    box-shadow: 0px 4px 10px rgba(255, 136, 0, 0.7);
+  }
+  
+  ion-button:hover {
+    background: linear-gradient(to right, #ffcc00, #ff8800, #ff3b30);
+    transform: scale(1.05);
+  }
+  
+  /* 📏 Responsive para móviles */
+  @media (max-width: 768px) {
+    ion-item {
+      width: 90%;
+      margin: 5px auto;
+    }
+  }
+  

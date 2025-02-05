@@ -1,0 +1,129 @@
+/* 🌑 Fondo oscuro */
+.fondo-oscuro {
+    --background: #0a0a0a;
+    color: #ffcc00;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* 🛠 Toolbar y Header */
+  ion-header {
+    background: #111;
+  }
+  
+  ion-toolbar {
+    background: #111;
+    color: #ff8800;
+  }
+  
+  /* 📌 Título */
+  ion-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff3b30;
+    text-align: center;
+  }
+  
+  /* 🎛️ Campos de entrada */
+  ion-item {
+    --background: #333;
+    --color: white;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  /* 🏷️ Etiquetas */
+  ion-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  /* ✍ Entrada de datos */
+  ion-input {
+    color: white;
+    font-size: 16px;
+  }
+  
+  /* ⚠ Mensaje de error */
+  ion-text[color="danger"] {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  /* 🎛 Botones */
+  .botones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  ion-button {
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Botón de guardar con degradado */
+  ion-button[color="success"] {
+    --background: linear-gradient(to right, #ff3b30, #ff8800, #ffcc00) !important;
+    --color: white !important;
+    box-shadow: 0px 4px 10px rgba(255, 136, 0, 0.7);
+  }
+  
+  ion-button[color="success"]:hover {
+    background: linear-gradient(to right, #ffcc00, #ff8800, #ff3b30);
+    transform: scale(1.05);
+  }
+  
+  /* Botón de cancelar */
+  ion-button[color="danger"] {
+    --background: #ff3b30;
+    --color: white;
+    box-shadow: 0px 4px 10px rgba(255, 59, 48, 0.7);
+  }
+  
+  ion-button[color="danger"]:hover {
+    background: darken(#ff3b30, 10%);
+    transform: scale(1.05);
+  }
+  
+  /* 📏 Responsive para mejorar en móviles */
+  @media (max-width: 768px) {
+    ion-item {
+      width: 90%;
+      margin: 5px auto;
+    }
+  
+    .botones-container {
+      flex-direction: column;
+    }
+  }
+  ::ng-deep .custom-modal {
+    --width: 90%;
+    --height: auto;
+    --border-radius: 20px;
+    --box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    --background: white;
+    --backdrop-opacity: 0.4;
+    padding: 20px;
+  }
+  
+  ::ng-deep .modal-wrapper {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,109 @@
+// 🎨 Variables de colores
+$color-primario: #ff3b30;
+$color-secundario: #ff8800;
+$color-terciario: #ffcc00;
+$color-fondo: #0a0a0a;
+$color-texto: white;
+$color-input: #222;
+$color-hover: #333;
+
+// 🎭 Mixins reutilizables
+@mixin sombra-boton($color) {
+  box-shadow: 0px 4px 10px rgba($color, 0.7);
+}
+
+@mixin degradado-boton {
+  background: linear-gradient(to right, $color-primario, $color-secundario, $color-terciario) !important;
+}
+
+// 🌑 Fondo oscuro total
+.fondo-oscuro {
+  background: $color-fondo;
+  color: $color-terciario;
+  font-family: 'Poppins', sans-serif;
+}
+
+// 🛠 Header y Toolbar
+ion-header {
+  background: darken($color-fondo, 5%);
+}
+
+ion-toolbar {
+  background: #111;
+  color: $color-terciario;
+  text-align: center;
+}
+
+// 🏷️ Estilos para etiquetas
+ion-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: $color-terciario;
+}
+
+// 🎛️ Estilos para inputs
+ion-item {
+  --background: $color-input;
+  --color: $color-texto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+// 🎛️ Personalización de `ion-input`
+ion-input {
+  color: $color-texto;
+  font-size: 16px;
+}
+
+// 🎛️ Botones de acción
+.botones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+
+  ion-button {
+    font-weight: bold;
+    border-radius: 8px;
+    @include sombra-boton($color-secundario);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  // Botón de guardar
+  ion-button[color="success"] {
+    background: $color-secundario;
+    color: $color-texto;
+  }
+
+  // Botón de cancelar
+  ion-button[color="danger"] {
+    background: $color-primario;
+    color: $color-texto;
+  }
+}
+
+// 📏 Responsive para mejorar en móviles
+@media (max-width: 768px) {
+  ion-item {
+    width: 90%;
+    margin: 5px auto;
+  }
+
+  .botones-container {
+    flex-direction: column;
+  }
+}
+ion-button[color="success"] {
+    --background: #ff8800 !important; // Color naranja personalizado
+    --color: white !important;
+  }
+  
+  ion-button[color="danger"] {
+    --background: #ff3b30 !important; // Rojo personalizado
+    --color: white !important;
+  }
+  

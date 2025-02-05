@@ -1,0 +1,39 @@
+<ion-content class="ion-padding">
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Recuperar Contraseña</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card *ngIf="mostrarUsuario">
+    <ion-card-content>
+      <ion-label>Usuario</ion-label>
+      <ion-item>
+        <ion-input [(ngModel)]="usuario"></ion-input>
+      </ion-item>
+      <ion-button expand="full" color="danger" (click)="verificarUsuario()">Verificar Usuario</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="mostrarPregunta">
+    <ion-card-content>
+      <ion-label>Fecha de tu graduacion de la escula</ion-label>
+      <ion-item>
+        <ion-datetime presentation="date" [(ngModel)]="respuesta"></ion-datetime>
+      </ion-item>
+      <ion-button expand="full" color="danger" (click)="verificarRespuesta()">Verificar Respuesta</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="mostrarCambioClave">
+    <ion-card-content>
+      <ion-label>Nueva Clave</ion-label>
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="nuevaClave"></ion-input>
+      </ion-item>
+      <ion-button expand="full" color="danger" (click)="cambiarClave()">Cambiar Clave</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

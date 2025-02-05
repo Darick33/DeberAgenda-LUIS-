@@ -1,0 +1,62 @@
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Opciones</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-item (click)="verPerfil()">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label class="ion-padding">Perfil</ion-label>
+      </ion-item>
+      <ion-item (click)="cerrarSesion()">
+        <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+        <ion-label class="ion-padding">Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Perfil</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding">
+      <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <ion-icon name="person-circle-outline" style="font-size: 120px; color: gray;"></ion-icon>
+      </div>
+
+      <form (ngSubmit)="actualizarPerfil()">
+        <ion-item>
+          <ion-label position="floating">Cédula</ion-label>
+          <ion-input [(ngModel)]="perfil.ci" name="ci" type="text" disabled=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input [(ngModel)]="perfil.nombre" name="nombre" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Apellido</ion-label>
+          <ion-input [(ngModel)]="perfil.apellido" name="apellido" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input [(ngModel)]="perfil.correo" name="correo" type="text"></ion-input>
+        </ion-item>
+
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+          <ion-button type="submit" color="danger" expand="full">Actualizar perfil</ion-button>
+        </div>
+      </form>
+    </ion-content>
+  </div>
+</ion-app>
